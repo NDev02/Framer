@@ -165,6 +165,39 @@ export abstract class FramerComponent extends HTMLElement {
     }
 
     /**
+     * @description A pain in the ass to accomplish masterpiece, this function is used to add a listener for when a specified property or attribute changes.
+     * @param name The name of the property to listen for change of
+     * @param callback The function to call when the property has changed, receives two parameters: `(newVal, oldVal)`
+     */
+    onPropertyChange(name, callback) {
+
+        let initialValue = `${this[name]}`;
+        let initialCall = true;
+
+        let instance = this;
+
+        Object.defineProperty(this, name, { 
+            set: function(val) { let oldVal = "" + this[`_${name}`]; this[`_${name}`] = val; this.props[`_${name}`] = val; if(!initialCall) callback(val, oldVal); },
+        });
+
+        Object.defineProperty(this, name, { 
+            get: function() { return this[`_${name}`]; },
+        });
+
+        Object.defineProperty(this.props, name, { 
+            set: function(val) { let oldVal = "" + this[`_${name}`]; this[`_${name}`] = val; instance[`_${name}`] = val; if(!initialCall) callback(val, oldVal); },
+        });
+
+        Object.defineProperty(this.props, name, { 
+            get: function() { return this[`_${name}`]; },
+        });
+
+        this[name] = initialValue;
+        initialCall = false;
+
+    }
+
+    /**
      * @description Function called when the component is added to the DOM
      */
     abstract init(): void;
