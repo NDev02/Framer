@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        "**/*.js": true,
+        "**/*.js.map": true,
+        "tsconfig.json": true,
+        "tsconfig.tsbuildinfo": true,
+        ".vscode": true
+    }
+}

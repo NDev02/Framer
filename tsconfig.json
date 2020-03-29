@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "jsx": "react",
+    "jsxFactory": "Framer.createElement",
+    "sourceMap": false,
+    "allowJs": false,
+    "removeComments": true
+  }
+}

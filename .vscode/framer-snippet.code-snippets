@@ -1,0 +1,46 @@
+{
+	"create app": {
+		"prefix": "cfa",
+		"body": [
+			"import Framer from './Framer.js';",
+			"Framer.css('styles.css');",
+			"",
+			"class App extends Framer {",
+			"\t",
+			"\tconstructor() {",
+			"\t\t",
+			"\t\tsuper('#root', true);",
+			"\t\t",
+			"\t}",
+			"\t",
+			"\tinit() {",
+			"\t\t",
+			"\t}",
+			"\t",
+			"\tperiodic() {",
+			"\t\t",
+			"\t}",
+			"\t",
+			"}",
+			"",
+			"export default new App();"
+		],
+		"description": "Creates a Framer App"
+	},
+	"create component": {
+		"prefix": "cfc",
+		"body": [
+			"import Framer from './Framer';",
+			"import { FramerComponent } from './Framer';",
+			"",
+			"export default class MyComponent extends FramerComponent {",
+			"\t",
+			"\tinit() {",
+			"\t\t",
+			"\t}",
+			"\t",
+			"}"
+		],
+		"description": "Creates a Framer Component"
+	}
+}
