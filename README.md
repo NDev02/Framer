@@ -1,4 +1,6 @@
-![Logo v1](/assets/Framer.png)
+<p align="center">
+  <img width="460" src="/assets/Framer.png">
+</p>
 
 ## Framer
 A janky-ish, in-development, web-framework. I mainly developed this framework because I was bored during quarantine, but hey why not put it online 🤷‍♂️. Don't expect it to work amazingly, and definitely don't expect it to work all the time. This project is currently not in a place I would recommend for distribution... Let's call this v0.0.1 beta.
