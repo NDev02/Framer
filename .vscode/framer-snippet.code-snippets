@@ -30,8 +30,8 @@
 	"create component": {
 		"prefix": "cfc",
 		"body": [
-			"import Framer from './Framer';",
-			"import { FramerComponent } from './Framer';",
+			"import Framer from './Framer.js';",
+			"import { FramerComponent } from './Framer.js';",
 			"",
 			"export default class MyComponent extends FramerComponent {",
 			"\t",
