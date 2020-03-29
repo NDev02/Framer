@@ -1,7 +1,7 @@
+![Logo v1](/assets/Framer.png)
+
 ## Framer
 A janky-ish, in-development, web-framework. I mainly developed this framework because I was bored during quarantine, but hey why not put it online 🤷‍♂️. Don't expect it to work amazingly, and definitely don't expect it to work all the time. This project is currently not in a place I would recommend for distribution... Let's call this v0.0.1 beta.
-
-![Logo v1](/assets/Framer.png)
 
 ### Basics
 Alright so the rules here are pretty simple. You have an application that everything is rendered (FramerApp) in and components (FramerComponents) that act as HTML elements but more manipulatable. FramerComponents extend the HTMLElement class and therefore inherit all those cool functions but you are also able to write your own and get them to work how you want with custom HTML Framer Components. Everything here is intended to be written in TypeScript (except for obviously the HTML and CSS) and everything works as modules - much like the many other web frameworks out there. Speaking of many other frameworks, there is support for JSX - hooray! 🎉 - so it is super easy to write your HTML inline with your typescript code just like you would with a framework like React.
