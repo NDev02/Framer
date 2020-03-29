@@ -1,5 +1,4 @@
 import Framer from './Framer.js';
-import CenteredDiv from './Landing.js';
 Framer.css('styles.css');
 
 class App extends Framer {
