@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="100" src="/assets/Framer.png">
+  <img width="200" src="/assets/Framer.png">
 </p>
 
 ## Framer
