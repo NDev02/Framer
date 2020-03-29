@@ -119,6 +119,7 @@ export default abstract class Framer {
 
         let element = document.createElement(tag);
         element = Object.assign(element, attributes);
+        element.props = attributes;
         for(let child of children) {
 
             if(Array.isArray(child)) {
@@ -151,6 +152,8 @@ export default abstract class Framer {
 }
 
 export abstract class FramerComponent extends HTMLElement {
+
+    props;
 
     /**
      * @description Function called automatically by the browser when a custom element is appended to the DOM 
