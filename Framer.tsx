@@ -99,6 +99,16 @@ export default abstract class Framer {
 
     /**
      * @static
+     * @description Returns whether or not Framer thinks the display size is small enough to be a mobile device
+     */
+    static isMobileSize() {
+
+        return (window.innerWidth < 800);
+
+    }
+
+    /**
+     * @static
      * @description Takes transpiled JSX expressions and converts them into injectable HTML
      * @param {string} tag What the tag of the HTML element to create is
      * @param {Object} attributes What attributes to assign the element
@@ -167,17 +177,18 @@ export abstract class FramerComponent extends HTMLElement {
     /**
      * @description A pain in the ass to accomplish masterpiece, this function is used to add a listener for when a specified property or attribute changes.
      * @param name The name of the property to listen for change of
-     * @param callback The function to call when the property has changed, receives two parameters: `(newVal, oldVal)`
+     * @param callback The function to call when the property has changed, receives two parameters: `(newVal, oldVal)`. The callback function you pass in will have `.bind(this)` applied to it automatically to ensure that `this` refers to this FramerComponent inside the callback.
      */
     onPropertyChange(name, callback) {
 
+        callback = callback.bind(this);
         let initialValue = `${this[name]}`;
         let initialCall = true;
 
         let instance = this;
 
         Object.defineProperty(this, name, { 
-            set: function(val) { let oldVal = "" + this[`_${name}`]; this[`_${name}`] = val; this.props[`_${name}`] = val; if(!initialCall) callback(val, oldVal); },
+            set: function(val) { let oldVal = "" + this[`_${name}`]; this[`_${name}`] = val; this.props[`_${name}`] = val; if(!initialCall) callback(val, oldVal) },
         });
 
         Object.defineProperty(this, name, { 
@@ -185,7 +196,7 @@ export abstract class FramerComponent extends HTMLElement {
         });
 
         Object.defineProperty(this.props, name, { 
-            set: function(val) { let oldVal = "" + this[`_${name}`]; this[`_${name}`] = val; instance[`_${name}`] = val; if(!initialCall) callback(val, oldVal); },
+            set: function(val) { let oldVal = "" + this[`_${name}`]; this[`_${name}`] = val; instance[`_${name}`] = val; if(!initialCall) callback(val, oldVal) },
         });
 
         Object.defineProperty(this.props, name, { 
