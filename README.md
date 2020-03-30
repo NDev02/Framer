@@ -1,5 +1,5 @@
 <p align="center" style="background: linear-gradient(315deg, rgb(64, 92, 177), rgb(39, 60, 124));">
-  <img width="200" src="/assets/Framer Logo.svg">
+  <img width="300" src="/assets/Framer Logo.svg">
 </p>
 
 ## Framer
