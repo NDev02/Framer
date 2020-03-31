@@ -40,7 +40,7 @@ export default abstract class Framer {
      */
     clearRoot(): void {
 
-        let children = [...this.rootElement.children]
+        let children = [...this.rootElement.children];
         children.forEach(child => child.remove());
 
     }
@@ -78,11 +78,23 @@ export default abstract class Framer {
 
     /**
      * @description Appends child(ren) to the application's root element
-     * @param htmlCollection The child(ren) to add to the root element
+     * @param htmlCollection The child(ren) to add to the root element. If you want to pass in multiple children you can either put them in an array and pass in the array or comma separate each child as its own paramter to the method
      */
-    append(htmlCollection: Node): void {
+    append(...htmlCollection): void {
 
-        this.rootElement.append(htmlCollection);
+        if(htmlCollection.length > 1) {
+
+            htmlCollection.forEach(node => {this.rootElement.append(node)});
+            
+        } else if(Array.isArray(htmlCollection[0])) {
+
+            htmlCollection[0].forEach(node => {this.rootElement.append(node)});
+
+        } else {
+        
+            this.rootElement.append(htmlCollection[0]);
+
+        }
 
     }
 
@@ -154,10 +166,9 @@ export default abstract class Framer {
     abstract init(): void;
 
     /**
-     * @abstract
-     * @description Function called periodically, how often it is called can be set by `instance.setPeriodicFPS(x);` the default is 2fps
+     * @description Function called periodically, how often it is called can be set by `instance.setPeriodicFPS(x);` the default is 2fps if it has not been disabled upon initialization
      */
-    abstract periodic(): void;
+    periodic(): void {}
 
 }
 
@@ -170,16 +181,17 @@ export abstract class FramerComponent extends HTMLElement {
      */
     connectedCallback(): void {
 
+        this.clear();
         this.init();
 
     }
 
     /**
      * @description A pain in the ass to accomplish masterpiece, this function is used to add a listener for when a specified property or attribute changes.
-     * @param name The name of the property to listen for change of
-     * @param callback The function to call when the property has changed, receives two parameters: `(newVal, oldVal)`. The callback function you pass in will have `.bind(this)` applied to it automatically to ensure that `this` refers to this FramerComponent inside the callback.
+     * @param {string} name The name of the property to listen for change of
+     * @param {Function} callback The function to call when the property has changed, receives two parameters: `(newVal, oldVal)`. The callback function you pass in will have `.bind(this)` applied to it automatically to ensure that `this` refers to this FramerComponent inside the callback.
      */
-    onPropertyChange(name, callback) {
+    onPropertyChange(name: string, callback: Function): void {
 
         callback = callback.bind(this);
         let initialValue = `${this[name]}`;
@@ -205,6 +217,16 @@ export abstract class FramerComponent extends HTMLElement {
 
         this[name] = initialValue;
         initialCall = false;
+
+    }
+
+    /**
+     * @description Removes all children from this component
+     */
+    clear(): void {
+
+        let children = [...this.children];
+        children.forEach(child => child.remove());
 
     }
 

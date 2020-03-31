@@ -2,7 +2,7 @@
 	"create app": {
 		"prefix": "cfa",
 		"body": [
-			"import Framer from './Framer.js';",
+			"import Framer from './framer_components/Framer.js';",
 			"Framer.css('styles.css');",
 			"",
 			"class App extends Framer {",
@@ -23,7 +23,7 @@
 			"\t",
 			"}",
 			"",
-			"export default new App();"
+			"export default (new App());"
 		],
 		"description": "Creates a Framer App"
 	},
@@ -34,6 +34,8 @@
 			"import { FramerComponent } from './Framer.js';",
 			"",
 			"export default class MyComponent extends FramerComponent {",
+			"\t",
+			"\tprops = {};",
 			"\t",
 			"\tinit() {",
 			"\t\t",
