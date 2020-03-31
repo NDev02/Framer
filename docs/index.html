@@ -64,6 +64,30 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
+				<p align="center" style="background: linear-gradient(315deg, rgb(64, 92, 177), rgb(39, 60, 124));">
+					<img width="300" src="/assets/Framer Logo.svg">
+				</p>
+				<p><a href="https://ndev02.github.io/Framer-Website">https://ndev02.github.io/Framer-Website</a></p>
+				<a href="#a-hrefhttpsndev02githubioframer-websiteframera" id="a-hrefhttpsndev02githubioframer-websiteframera" style="color: inherit; text-decoration: none;">
+					<h2><a href="https://ndev02.github.io/Framer-Website">Framer</a></h2>
+				</a>
+				<p>A janky-ish, in-development, web-framework. I mainly developed this framework because I was bored during quarantine, but hey why not put it online 🤷‍♂️. Don&#39;t expect it to work amazingly, and definitely don&#39;t expect it to work all the time. This project is currently not in a place I would recommend for distribution... Let&#39;s call this v0.0.1 beta.</p>
+				<a href="#basics" id="basics" style="color: inherit; text-decoration: none;">
+					<h3>Basics</h3>
+				</a>
+				<p>Alright so the rules here are pretty simple. You have an application (FramerApp) that everything is rendered in and components (FramerComponents) that act as HTML elements but more manipulatable. FramerComponents extend the HTMLElement class and therefore inherit all those cool functions but you are also able to write your own and get them to work how you want with custom HTML Framer Components. Everything here is intended to be written in TypeScript (except for obviously the HTML and CSS) and everything works as modules - much like the many other web frameworks out there. Speaking of many other frameworks, there is support for JSX - hooray! 🎉 - so it is super easy to write your HTML inline with your typescript code just like you would with a framework like React.</p>
+				<a href="#setup" id="setup" style="color: inherit; text-decoration: none;">
+					<h3>Setup</h3>
+				</a>
+				<p>First and foremost, make sure you have the <a href="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html">TypeScript</a> Compiler installed on your development machine. If you have npm installed you can just run the command <code>npm install -g typescript</code>. If you have <a href="https://code.visualstudio.com/download">VSCode</a> the remainder of the setup has been done for you, just download the example project and get started. In the example project you will find I have predefined two helpful VSCode snippets, cfa and cfc. cfa creates a template for a Framer Application and cfc creates a template for a Framer Component. To start developing you can use the ctrl + shift + b keyboard shortcut and choose the predefined <code>tsc:watch - tsconfig.json</code> task, which will basically start transpiling everything into JavaScript in the background and if you use the watch task it will even re-transpile your code as you save your TypeScript files automatically - nice! 👍 Also to enhance your development experience, I would recommend installing <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a> from the VSCode market place, after installing Live Server open up the index.html file for the project and right click anywhere ont the code, choose open with Live Server. This will serve your project and it automatically reloads the in-development webpage whenever it detects a change in code.  </p>
+				<a href="#where39s-the-documentation" id="where39s-the-documentation" style="color: inherit; text-decoration: none;">
+					<h3>Where&#39;s the documentation?</h3>
+				</a>
+				<p>Documentation can currently be found in the docs folder, just open up that index.html page in a web browser - soon it will be on a github pages page along with a more in-depth tutorial. 👨‍💻</p>
+				<a href="#future-plans" id="future-plans" style="color: inherit; text-decoration: none;">
+					<h3>Future Plans</h3>
+				</a>
+				<p>I&#39;d like to keep developing this framework to eventually be something that I&#39;d use in production. What I really want to try to implement to sort of make this stand out among other frameworks is setup a &quot;package manager&quot; for custom FramerComponents so developers can quickly just pull an already developed component from the cloud and not have to reinvent the wheel - like NPM but for Framer. I also want to look in getting this to support javascript and not have to be transpiled by TypeScript, unfortunately as of right now its a hard task to achieve without losing JSX support 😒 but we shall see...</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -71,9 +95,6 @@
 				<ul>
 					<li class="globals  ">
 						<a href="globals.html"><em>Globals</em></a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/_app_.html">&quot;<wbr>App&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/_framer_.html">&quot;<wbr>Framer&quot;</a>

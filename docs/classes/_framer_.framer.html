@@ -89,11 +89,6 @@
 				<ul class="tsd-hierarchy">
 					<li>
 						<span class="target">Framer</span>
-						<ul class="tsd-hierarchy">
-							<li>
-								<a href="_app_.app.html" class="tsd-signature-type">App</a>
-							</li>
-						</ul>
 					</li>
 				</ul>
 			</section>
@@ -126,6 +121,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_framer_.framer.html#setperiodicfps" class="tsd-kind-icon">set<wbr>PeriodicFPS</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_framer_.framer.html#createelement" class="tsd-kind-icon">create<wbr>Element</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_framer_.framer.html#css-1" class="tsd-kind-icon">css</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_framer_.framer.html#ismobilesize" class="tsd-kind-icon">is<wbr>Mobile<wbr>Size</a></li>
 							</ul>
 						</section>
 					</div>
@@ -143,7 +139,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in home/ndev02/Desktop/TypescriptFramer/Framer.tsx:10</li>
+									<li>Defined in <a href="https://github.com/NDev02/Framer/blob/8989304/framer_components/Framer.tsx#L10">home/ndev02/Desktop/Framer/framer_components/Framer.tsx:10</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -185,7 +181,7 @@
 					<div class="tsd-signature tsd-kind-icon">periodic<wbr>Interval<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in home/ndev02/Desktop/TypescriptFramer/Framer.tsx:10</li>
+							<li>Defined in <a href="https://github.com/NDev02/Framer/blob/8989304/framer_components/Framer.tsx#L10">home/ndev02/Desktop/Framer/framer_components/Framer.tsx:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -195,7 +191,7 @@
 					<div class="tsd-signature tsd-kind-icon">root<wbr>Element<span class="tsd-signature-symbol">:</span> <a href="_framer_.framercomponent.html#htmlelement" class="tsd-signature-type">HTMLElement</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in home/ndev02/Desktop/TypescriptFramer/Framer.tsx:9</li>
+							<li>Defined in <a href="https://github.com/NDev02/Framer/blob/8989304/framer_components/Framer.tsx#L9">home/ndev02/Desktop/Framer/framer_components/Framer.tsx:9</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -205,7 +201,7 @@
 					<div class="tsd-signature tsd-kind-icon">staged<wbr>Init<wbr>Functions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in home/ndev02/Desktop/TypescriptFramer/Framer.tsx:8</li>
+							<li>Defined in <a href="https://github.com/NDev02/Framer/blob/8989304/framer_components/Framer.tsx#L8">home/ndev02/Desktop/Framer/framer_components/Framer.tsx:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -216,13 +212,13 @@
 					<a name="append" class="tsd-anchor"></a>
 					<h3>append</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">append<span class="tsd-signature-symbol">(</span>htmlCollection<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Node</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">append<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>htmlCollection<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in home/ndev02/Desktop/TypescriptFramer/Framer.tsx:83</li>
+									<li>Defined in <a href="https://github.com/NDev02/Framer/blob/8989304/framer_components/Framer.tsx#L83">home/ndev02/Desktop/Framer/framer_components/Framer.tsx:83</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -235,9 +231,9 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>htmlCollection: <span class="tsd-signature-type">Node</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>htmlCollection: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The child(ren) to add to the root element</p>
+										<p>The child(ren) to add to the root element. If you want to pass in multiple children you can either put them in an array and pass in the array or comma separate each child as its own paramter to the method</p>
 									</div>
 								</li>
 							</ul>
@@ -255,7 +251,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in home/ndev02/Desktop/TypescriptFramer/Framer.tsx:41</li>
+									<li>Defined in <a href="https://github.com/NDev02/Framer/blob/8989304/framer_components/Framer.tsx#L41">home/ndev02/Desktop/Framer/framer_components/Framer.tsx:41</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -279,7 +275,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in home/ndev02/Desktop/TypescriptFramer/Framer.tsx:70</li>
+									<li>Defined in <a href="https://github.com/NDev02/Framer/blob/8989304/framer_components/Framer.tsx#L70">home/ndev02/Desktop/Framer/framer_components/Framer.tsx:70</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -312,7 +308,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in home/ndev02/Desktop/TypescriptFramer/Framer.tsx:143</li>
+									<li>Defined in <a href="https://github.com/NDev02/Framer/blob/8989304/framer_components/Framer.tsx#L166">home/ndev02/Desktop/Framer/framer_components/Framer.tsx:166</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -330,7 +326,7 @@
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="periodic" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> periodic</h3>
+					<h3>periodic</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">periodic<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
@@ -338,15 +334,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in home/ndev02/Desktop/TypescriptFramer/Framer.tsx:149</li>
+									<li>Defined in <a href="https://github.com/NDev02/Framer/blob/8989304/framer_components/Framer.tsx#L171">home/ndev02/Desktop/Framer/framer_components/Framer.tsx:171</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<dl class="tsd-comment-tags">
-									<dt>abstract</dt>
-									<dd></dd>
 									<dt>description</dt>
-									<dd><p>Function called periodically, how often it is called can be set by <code>instance.setPeriodicFPS(x);</code> the default is 2fps</p>
+									<dd><p>Function called periodically, how often it is called can be set by <code>instance.setPeriodicFPS(x);</code> the default is 2fps if it has not been disabled upon initialization</p>
 									</dd>
 								</dl>
 							</div>
@@ -364,7 +358,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in home/ndev02/Desktop/TypescriptFramer/Framer.tsx:52</li>
+									<li>Defined in <a href="https://github.com/NDev02/Framer/blob/8989304/framer_components/Framer.tsx#L52">home/ndev02/Desktop/Framer/framer_components/Framer.tsx:52</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -397,7 +391,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in home/ndev02/Desktop/TypescriptFramer/Framer.tsx:107</li>
+									<li>Defined in <a href="https://github.com/NDev02/Framer/blob/8989304/framer_components/Framer.tsx#L129">home/ndev02/Desktop/Framer/framer_components/Framer.tsx:129</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -444,7 +438,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in home/ndev02/Desktop/TypescriptFramer/Framer.tsx:94</li>
+									<li>Defined in <a href="https://github.com/NDev02/Framer/blob/8989304/framer_components/Framer.tsx#L106">home/ndev02/Desktop/Framer/framer_components/Framer.tsx:106</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -469,6 +463,32 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="ismobilesize" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> is<wbr>Mobile<wbr>Size</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Mobile<wbr>Size<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/NDev02/Framer/blob/8989304/framer_components/Framer.tsx#L116">home/ndev02/Desktop/Framer/framer_components/Framer.tsx:116</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>static</dt>
+									<dd></dd>
+									<dt>description</dt>
+									<dd><p>Returns whether or not Framer thinks the display size is small enough to be a mobile device</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -476,9 +496,6 @@
 				<ul>
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/_app_.html">&quot;<wbr>App&quot;</a>
 					</li>
 					<li class="current tsd-kind-module">
 						<a href="../modules/_framer_.html">&quot;<wbr>Framer&quot;</a>
@@ -527,6 +544,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
 								<a href="_framer_.framer.html#css-1" class="tsd-kind-icon">css</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_framer_.framer.html#ismobilesize" class="tsd-kind-icon">is<wbr>Mobile<wbr>Size</a>
 							</li>
 						</ul>
 					</li>
